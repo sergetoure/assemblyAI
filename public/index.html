@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Meeting Transcriber</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <main class="card">
+    <h1>Meeting Transcriber</h1>
+    <p class="subtitle">Upload a recording and get a plain-text transcript powered by AssemblyAI.</p>
+
+    <form id="upload-form">
+      <label for="audio-input" id="drop-zone" class="drop-zone">
+        <span id="drop-zone-text">Choose an audio file or drag it here</span>
+        <input id="audio-input" name="audio" type="file" accept="audio/*" required />
+      </label>
+      <button id="submit-btn" type="submit" disabled>Transcribe</button>
+    </form>
+
+    <div id="status" class="status" hidden></div>
+
+    <section id="result" class="result" hidden>
+      <div class="result-header">
+        <h2>Transcript</h2>
+        <button id="copy-btn" type="button">Copy</button>
+      </div>
+      <pre id="transcript-text"></pre>
+    </section>
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>
