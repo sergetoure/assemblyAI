@@ -13,6 +13,8 @@ npm start
 
 ## Usage
 
+Open http://localhost:3000 in a browser for a simple upload UI, or call the API directly:
+
 ```bash
 curl -X POST http://localhost:3000/api/transcribe \
   -F "audio=@/path/to/recording.mp3"
